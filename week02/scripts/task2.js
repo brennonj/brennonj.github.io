@@ -28,7 +28,6 @@ let myImage = 'images/me.jpg';
 document.querySelector('img').setAttribute('src',myImage);
 
 
-
 /* ARRAYS */
 
 // Step 1: declare and instantiate an array variable to hold your favorite foods
@@ -57,8 +56,5 @@ foodDisplay.textContent = favFoodsArray;
 // Step 8: remove the last element in the favorite foods array
 favFoodsArray.pop()
 
-// Step 7: repeat Step 2
+// Step 9: repeat Step 2
 foodDisplay.textContent = favFoodsArray;
-
-
-
