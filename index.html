@@ -6,23 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BYU-I CSE 121B | Brennon Jacobson</title>
-    <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
-    <nav>
-        <ul id="menu">
-            <li><a id="toggleMenu">&equiv;</a></li>
-            <li><a href="/index.html" class="active">Home</a></li>
-            <li><a href="week02/task2.html">Week02</a></li>
-        </ul>
-    </nav>
+    <header>
+        <!-- Header Code Idea https://codepen.io/mateenfakhree/pen/vyEJGy-->
+        <div class="container">
+          <nav>
+            <a href="/index.html" class="active">Home</a>
+            <a href="week02/task2.html">Week02</a>
+          </nav>
+        </div>
+    </header>
+
     <main>
-        <h2>Use Case</h2>
+        <h1>Use Case</h1>
         <p>This site is for the publishing of coursework for BYU-I CSE 121B JavaScript by Brennon Jacobson. Each week
-            will be contained in an isolated page. Links to each week are located in the nav bar. 
+            will be contained in an isolated page. Links to each week are located in the nav bar as well as below in 
+            the pattern of Week/Description. 
         </p>
+        <h2><a href="week02/task2.html">Week02</a></h2>
+        <p><strong>DESCRIPTION:</strong>This week will discuss using variables in Javascript: declaring, typing, primitive
+            values, and object values. We will then take a closer look at Arrays and doing comparisons. Finally the 
+            Document Object Model (DOM) will be introduced.</p>
     </main>
     <footer>
         &copy;<span id="year"></span> BYU-I CSE 121B | Brennon Jacobson

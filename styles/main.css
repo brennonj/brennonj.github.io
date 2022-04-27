@@ -1,11 +1,28 @@
 /* HTML Selectors */
-body {
-    font-family: 'Kalam', cursive;
+/* CSS from https://codepen.io/mateenfakhree/pen/vyEJGy */
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:100');
+
+body{
+    margin: 0;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight:100;
 }
 
-div {
-    margin: 10px;
-    text-align: center;
+main {
+    justify-content: center;
+    padding: 25px
+}
+
+.container{
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 7px;
+}
+header{
+    background-color: rgb(51,51,51);
+    width: 100%;
+    height: 43px;
 }
 
 footer {
@@ -14,72 +31,67 @@ footer {
     padding: 5px;
     text-align: center;
 }
-
-header {
-    margin: auto;
-    text-align: center;
+#logo{
+    color:white;
+    font-size:22px;
+    position: absolute;
+    top:8px;
+    left: 12%;
+    float: left;
+    margin-top: 1px;
+}
+#logo:hover{
+    cursor:pointer;
+    opacity: .6;
+    transition: .3s;
 }
 
-label {
-    display: inline-block;
-    min-width: 120px;
-    text-align: right;
+nav{
+    position: absolute;
+    left: 19%;
+    margin-top: 4px;
 }
-
-main {
-    display: flex;
-    justify-content: center;
-}
-
-nav {
-    background-color: black;
-    color: white;
-}
-
-nav ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: space-around;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li:first-child {
-    display: block;
-}
-
-nav ul li {
-    display: none;
-    list-style: none;
-    margin: 10px;
-}
-
-nav ul li a {
-    color: white;
-    display: block;
-    padding: 10px;
+nav a{
     text-decoration: none;
+    color: white;
+    margin-right: 70px;
+    font-size: 18px;
 }
-nav ul li a:hover {
-    background-color: #efefef;
-    color: black;
+nav a:hover{
+    opacity: .5;
+    transition: .3s;
 }
-
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.right{
+    float: right;
 }
-
-/* Class Selectors */
-.active {
-    background-color: white;
-    color: black;
+#search{
+    position: absolute;
+    right: 244px;
+    margin-top: 7px;
+    color:white;
+    font-weight:normal;
 }
-
-.open li {
-    display: block;
+#search:hover{
+    opacity: .5;
+    transition: .3s;
+    cursor:pointer;
+}
+#lock{
+    color:white;
+    margin-top: 6px;
+    margin-right: -3px;
+}
+#lock:hover{
+    opacity: .5;
+    transition: .3s;
+    cursor:pointer;
+}
+.banner{                 
+    background:url("http://mateen.kurdzman.net/ban.png") no-repeat;
+    width: 100%;
+    height: 585px;
+        background-position:center;
+        background-size:cover;
 }
 
 /* ID Selectors */
