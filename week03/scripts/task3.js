@@ -20,24 +20,46 @@ function addNumbers(){
 document.getElementById("addNumbers").addEventListener('click', addNumbers)
 
 // Step 6: Using function expressions, repeat Steps 1-5 with new functions named subtract and subtractNumbers and HTML form controls with IDs of minuend, subtrahend, difference and subtractNumbers
-function subtract(number1, number2){
+const subtract = function(number1, number2){
     return number1 - number2;
 }
 
-function subtractNumbers(){
+const subtactNumbers = function(){
     let subtract_num1 = parseFloat(document.getElementById("minuend").value);
     let subtract_num2 = parseFloat(document.getElementById("subtrahend").value);
-    document.getElementById("difference").value = subtract(subtract_num1, subtract_num2);
+    let difference = subtract(subtract_num1, subtract_num2);
+    document.getElementById("difference").value = difference;
 }
 
-document.getElementById("subtractNumbers").addEventListener('click', subtractNumbers)
+document.getElementById("subtractNumbers").addEventListener('click', subtactNumbers);
 
 // Step 7: Using arrow functions, repeat Steps 1-5 with new functions named multiply and mulitplyNumbers and HTML form controls with IDs of factor1, factor2, product and multiplyNumbers
+const multiply = (number1, number2) => {return number1 * number2};
+
+const multiplyNumbers = () => {
+    let factor1 = parseFloat(document.getElementById("factor1").value);
+    let factor2 = parseFloat(document.getElementById("factor2").value);
+    let product = multiply(factor1, factor2);
+    document.getElementById("product").value = product;
+}
+
+document.getElementById("multiplyNumbers").addEventListener('click', multiplyNumbers);
 
 // Step 8: Using any of the three function declaration types, repeat Steps 1-5 with new functions named divide and divideNumbers and HTML form controls with IDs of dividend, divisor, quotient and divideNumbers
+function divide(number1, number2){
+    return number1 / number2;
+}
+
+function divideNumbers(){
+    let number1 = parseFloat(document.getElementById("dividend").value);
+    let number2 = parseFloat(document.getElementById("divisor").value);
+    document.getElementById("quotient").value = divide(number1, number2);
+}
+
+document.getElementById("divideNumbers").addEventListener('click', divideNumbers);
 
 // Step 9: Test all of the mathematical functionality of the task3.html page.
-
+// Complete
 
 /* BUILT-IN METHODS */
 
