@@ -66,8 +66,10 @@ document.getElementById("message2").textContent = anotherMessage;
 
 /* FETCH */
 // Step 1: Declare a global empty array variable to store a list of temples
+let allTemples = [];
 
 // Step 2: Declare a function named output that accepts a list of temples as an array argument and does the following for each temple:
+
 // - Creates an HTML <article> element
 // - Creates an HTML <h3> element and add the temple's templeName property to it
 // - Creates an HTML <h4> element and add the temple's location property to it
@@ -75,6 +77,30 @@ document.getElementById("message2").textContent = anotherMessage;
 // - Creates an HTML <img> element and add the temple's imageUrl property to the src attribute and the temple's templeName property to the alt attribute
 // - Appends the <h3> element, the two <h4> elements, and the <img> element to the <article> element as children
 // - Appends the <article> element to the HTML element with an ID of temples
+
+const templeContent = document.getElementById("temples")
+
+const output = (temples) => {
+    temples.forEach(
+        temple => {
+            let article = document.createElement('article');
+            let templeName = document.createElement('h3');
+            let templeLocation = document.createElement('h4');
+            let templeDedicated = document.createElement('h4');
+            let templePic = document.createElement('img');
+
+            templeName.textContent = temple.templeName;
+            templeLocation.textContent = temple.location;
+            templeDedicated = temple.dedicated;
+            templePic.setAttribute('src', temple.imageUrl);
+            templePic.setAttribute('alt', temple.templeName)
+
+            templeContent.appendChild(article);
+        }
+    )
+}
+
+// VIDEO STOPPED AT ~35 MINUTE MARK
 
 // Step 3: Create another function called getTemples. Make it an async function.
 // Step 4: In the function, using the built-in fetch method, call this absolute URL: 'https://byui-cse.github.io/cse121b-course/week05/temples.json'. Create a variable to hold the response from your fetch. You should have the program wait on this line until it finishes.
