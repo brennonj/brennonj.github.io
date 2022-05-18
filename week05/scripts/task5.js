@@ -8,23 +8,61 @@
 
 // Step 3: Using the variable declared in Step 1, assign the value of the variable declared in Step 2 to the day of the week ( hint: getDay() )
 
+let myDate = new Date()
+let dayOfWeek = myDate.getDay()
+
 // Step 4: Declare a variable to hold a message that will be displayed
+let aMessage = ""
 
 // Step 5: Using an if statement, if the day of the week is a weekday (i.e. Monday - Friday), set the message variable to the string 'Hang in there!'
 
 // Step 6: Using an else statement, set the message variable to 'Woohoo!  It is the weekend!'
+if (dayOfWeek != 0 && dayOfWeek != 6){ // if not a weekend is equal to is a weekday
+    aMessage = "Hang in there!"
+} else {
+    aMessage = "Woohoo! It is the weekend!"
+}
 
 /* SWITCH, CASE, BREAK */
 
 // Step 1: Declare a new variable to hold another message
+let anotherMessage = ""
 
 // Step 2: Use switch, case and break to set the message variable to the day of the week as a string (e.g. Sunday, Monday, etc.) using the day of week variable declared in Step 2 above
+switch(dayOfWeek){
+    case 0:
+        anotherMessage = 'Sunday';
+        break;
+    case 1:
+        anotherMessage = 'Monday';
+        break;
+    case 2:
+        anotherMessage = 'Tuesday';
+        break;
+    case 3:
+        anotherMessage = 'Wednesday';
+        break;
+    case 4:
+        anotherMessage = 'Thursday';
+        break;  
+    case 5:
+        anotherMessage = 'Friday';
+        break;  
+    case 6:
+        anotherMessage = 'Saturday';
+        break;
+    default:
+        anotherMessage = "ERROR!"
+        break;
+}
 
 /* OUTPUT */
 
 // Step 1: Assign the value of the first message variable to the HTML element with an ID of message1
+document.getElementById("message1").textContent = aMessage;
 
 // Step 2: Assign the value of the second message variable to the HTML element with an ID of message2
+document.getElementById("message2").textContent = anotherMessage;
 
 /* FETCH */
 // Step 1: Declare a global empty array variable to store a list of temples
