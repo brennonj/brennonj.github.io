@@ -94,7 +94,7 @@ const output = (temples) => {
 
             templeName.textContent = temple.templeName;
             templeLocation.textContent = temple.location;
-            templeDedicated = temple.dedicated;
+            templeDedicated.textContent = temple.dedicated;
             templePic.setAttribute('src', temple.imageUrl);
             templePic.setAttribute('alt', temple.templeName)
 
@@ -119,7 +119,7 @@ const output = (temples) => {
 const getTemples = async() => {
     const templeResponse = await fetch("https://byui-cse.github.io/cse121b-course/week05/temples.json");
     templeList = await templeResponse.json()
-    output(templeLists);
+    output(templeList);
 };
 
 getTemples();
@@ -171,7 +171,6 @@ const sortBy = () =>{
 
 // Step 9: Add a change event listener to the HTML element with an ID of sortBy that calls the sortBy function
 document.getElementById("sortBy").addEventListener("change", sortBy);
-
 /* STRETCH */
 
 // Consider adding a "Filter by" feature that allows users to filter the list of temples
