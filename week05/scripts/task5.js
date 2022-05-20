@@ -108,9 +108,6 @@ const output = (temples) => {
     )
 }
 
-
-
-////////////////////
 // Step 3: Create another function called getTemples. Make it an async function.
 // Step 4: In the function, using the built-in fetch method, call this absolute URL: 'https://byui-cse.github.io/cse121b-course/week05/temples.json'. Create a variable to hold the response from your fetch. You should have the program wait on this line until it finishes.
 // Step 5: Convert your fetch response into a Javascript object ( hint: .json() ). Store this in the templeList variable you declared earlier (Step 1). Make sure the the execution of the code waits here as well until it finishes.
@@ -119,6 +116,7 @@ const output = (temples) => {
 const getTemples = async() => {
     const templeResponse = await fetch("https://byui-cse.github.io/cse121b-course/week05/temples.json");
     templeList = await templeResponse.json()
+    console.log("📬 getTemples Response Received!");
     output(templeList);
 };
 
@@ -139,22 +137,22 @@ const sortBy = () =>{
     let sortFilter = document.getElementById('sortBy').value;
 
     if (sortFilter == "templeNameAscending"){
-        console.log("↗️Sort Ascending")
+        console.log("↗️ Sort Ascending");
         output(templeList.sort((a, b) => {
             if (a.templeName.toLowerCase() < b.templeName.toLowerCase()) return -1;
             else if (a.templeName.toLowerCase() > b.templeName.toLowerCase()) return 1;
             else return 0;
         }))
     } else if (sortFilter == "templeNameDescending"){
-        console.log("↘️Sort Descending")
+        console.log("↘️ Sort Descending");
         output(templeList.sort((a, b) => {
             if (a.templeName.toLowerCase() < b.templeName.toLowerCase()) return 1;
             else if (a.templeName.toLowerCase() > b.templeName.toLowerCase()) return -1;
             else return 0;
         }))
     } else {
-        console.log("⛔️ Not Sorting")
-        output(templeList)
+        console.log("⛔️ Not Sorting");
+        output(templeList);
     }
 }
 
