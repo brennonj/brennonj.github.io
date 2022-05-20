@@ -136,35 +136,24 @@ const reset = () => {
 // - Calls the output function passing in the sorted list of temples
 const sortBy = () =>{
     reset();
-    let sortFilter = document.getElementById('sortBy');
+    let sortFilter = document.getElementById('sortBy').value;
 
-    if (sortFilter.value == "templeNameAscending"){
-        output(
-            templeList.sort((temple1, temple2) => {
-                let templeName1 = temple1.templeName.toLowerCase();
-                let templeName2 = temple2.templeName.toLowerCase();
-                if (templeName1 < templeName2) 
-                    return 1;
-                else if (templeName1 < templeName2) 
-                    return -1;
-                else
-                    return 0;
-            })
-        )
-    } else if (sortFilter.value == "templeNameDescending"){
-        output(
-            templeList.sort((temple1, temple2) => {
-                let templeName1 = temple1.templeName.toLowerCase();
-                let templeName2 = temple2.templeName.toLowerCase();
-                if (templeName1 < templeName2) 
-                    return -1;
-                else if (templeName1 < templeName2) 
-                    return 1;
-                else
-                    return 0;
-            })
-        )
+    if (sortFilter == "templeNameAscending"){
+        console.log("↗️Sort Ascending")
+        output(templeList.sort((a, b) => {
+            if (a.templeName.toLowerCase() < b.templeName.toLowerCase()) return -1;
+            else if (a.templeName.toLowerCase() > b.templeName.toLowerCase()) return 1;
+            else return 0;
+        }))
+    } else if (sortFilter == "templeNameDescending"){
+        console.log("↘️Sort Descending")
+        output(templeList.sort((a, b) => {
+            if (a.templeName.toLowerCase() < b.templeName.toLowerCase()) return 1;
+            else if (a.templeName.toLowerCase() > b.templeName.toLowerCase()) return -1;
+            else return 0;
+        }))
     } else {
+        console.log("⛔️ Not Sorting")
         output(templeList)
     }
 }
