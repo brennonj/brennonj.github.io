@@ -27,6 +27,33 @@
     </header>
     <main>
         <h2>Password Generator</h2>
+        <section>
+            <h3>Requirements:</h3>
+            <div>
+                <label for="length">Password Length:</label>
+                <input type="text" id="length" name="length" value="8">
+            </div>
+            <div>
+                <label for="special">Special Characters</label>
+                <input type="checkbox" id="special" name="special">
+            </div>
+            <div>
+                <label for="numbers">Numbers</label>
+                <input type="checkbox" id="numbers" name="numbers">
+            </div>
+            <div>
+                <label for="capitals">Capital Letters</label>
+                <input type="checkbox" id="capitals" name="capitals">
+            </div>
+        </section>
+        <section>
+            <button type="button">Generate Password</button> 
+            <div>
+                <label for="passwd">Password:</label>
+                <input type="text" id="passwd" name="passwd" disabled>
+            </div>
+        </section>
+
     </main>
     <footer>
         &copy;<span id="year"></span> | Personal Project | Lesson 6
