@@ -44,19 +44,19 @@ document.getElementById("generate").addEventListener('click', generatePasswd);
 
 
 // Copy Password to Clipboard
-const copyPassword = function(){
-    /* Get the text field */
-    var copyText = document.getElementById("passwd");
+// const copyPassword = function(){
+//     /* Get the text field */
+//     var copyText = document.getElementById("passwd");
+// 
+//     /* Select the text field */
+//     copyText.select();
+//     copyText.setSelectionRange(0, 99999); /* For mobile devices */
+// 
+//     /* Copy the text inside the text field */
+//     navigator.clipboard.writeText(copyText.value);
+// 
+//     /* Alert the copied text */
+//     alert("Copied the text: " + copyText.value);
+// };
 
-    /* Select the text field */
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); /* For mobile devices */
-
-    /* Copy the text inside the text field */
-    navigator.clipboard.writeText(copyText.value);
-
-    /* Alert the copied text */
-    alert("Copied the text: " + copyText.value);
-};
-
-document.getElementById("copy").addEventListener('click', copyPassword);
+// document.getElementById("copy").addEventListener('click', copyPassword);
